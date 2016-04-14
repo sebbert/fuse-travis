@@ -3,6 +3,13 @@ os:
   - osx
 
 sudo: required
+
+cache:
+  directories:
+    - /Applications/Fuse.app
+    - /usr/local/share/uno
+    - $HOME/fuse
+
 install:
     - ./.travis/install.sh
 script: ./.travis/test.sh
