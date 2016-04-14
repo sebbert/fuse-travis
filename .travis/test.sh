@@ -8,7 +8,7 @@ exitcode=$?
 echo travis_fold:end:#uno
 if [ $exitcode -ne 0 ]; then
 	echo "uno $name - FAIL"
-	status=$exitcod
+	status=$exitcode
 else
 	echo "uno $name - PASS"
 fi
@@ -22,7 +22,7 @@ exitcode=$?
 echo travis_fold:end:#android
 if [ $exitcode -ne 0 ]; then
 	echo "uno android $name - FAIL"
-	status=$exitcod
+	status=$exitcode
 else
 	echo "uno android $name - PASS"
 fi
