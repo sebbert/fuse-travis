@@ -3,6 +3,8 @@
 # https://docs.travis-ci.com/user/multi-os/
 # https://docs.travis-ci.com/user/osx-ci-environment/
 
+# http://apple.stackexchange.com/questions/72226/installing-pkg-with-terminal
+
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	ls -l /Applications
 	ls -l /Applications/Fuse.app
@@ -16,3 +18,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	ls -l /Applications/Fuse.app
 	ls -l fuse
 fi
+
+which gcc
+ls -l /usr/bin/gcc
+gcc --help
