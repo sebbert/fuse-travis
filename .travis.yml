@@ -1,6 +1,8 @@
 language: fuse
 os:
   - osx
+
+sudo: required
 install:
     - ./.travis/install.sh
-script: make test
+script: ./.travis/test.sh
