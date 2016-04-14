@@ -1,7 +1,9 @@
 language: fuse
 os:
   - osx
-
+compiler:
+  - gcc
+  - clang
 sudo: required
 
 cache:
@@ -10,6 +12,7 @@ cache:
     - /usr/local/share/uno
     - $HOME/fuse
 
+# http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
 # before_script:
 #     - ./.travis/add-key.sh
 install:
