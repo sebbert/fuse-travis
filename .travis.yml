@@ -1,9 +1,6 @@
 language: fuse
 os:
   - osx
-compiler:
-  - gcc
-  - clang
 sudo: required
 
 cache:
