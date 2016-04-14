@@ -1,0 +1,6 @@
+language: fuse
+os:
+  - osx
+install:
+    - ./.travis/install.sh
+script: make test
