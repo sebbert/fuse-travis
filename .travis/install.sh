@@ -12,7 +12,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	mkdir fuse
 	wget https://api.fusetools.com/fuse-release-management/releases/0.11.1.6272/osx
 	mv osx fuse/fuse_osx_0_11_1_6262.pkg
-	installer -pkg fuse/fuse_osx_0_11_1_6262.pkg -target /
+	sudo installer -pkg fuse/fuse_osx_0_11_1_6262.pkg -target /
 	echo "Installed Fuse"
 	ls -la /Users/travis
 	ls -la /Users/travis/.fuse
