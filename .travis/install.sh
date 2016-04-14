@@ -17,7 +17,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "Installed Fuse"
 	ls -la /Users/travis
 	ls -la /Users/travis/.fuse
-	fuse install android
+	echo | fuse install android
 	ls -l /Applications
 	ls -l /Applications/Fuse.app
 	ls -l fuse
