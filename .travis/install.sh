@@ -14,6 +14,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	mv osx fuse/fuse_osx_0_11_1_6262.pkg
 	sudo installer -pkg fuse/fuse_osx_0_11_1_6262.pkg -target /
 	echo "Installed Fuse"
+	fuse install android
 	ls -l /Applications
 	ls -l /Applications/Fuse.app
 	ls -l fuse
