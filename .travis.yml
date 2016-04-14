@@ -10,6 +10,8 @@ cache:
     - /usr/local/share/uno
     - $HOME/fuse
 
+# before_script:
+#     - ./.travis/add-key.sh
 install:
     - ./.travis/install.sh
 script: ./.travis/test.sh
