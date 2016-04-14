@@ -6,10 +6,7 @@
 # http://apple.stackexchange.com/questions/72226/installing-pkg-with-terminal
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
-	ls -l /Applications
-	ls -l /Applications/Fuse.app
-	ls -l fuse
-	pwd
+	# In /Users/travis/build/bolav/fuse-travis
 	mkdir fuse
 	wget https://api.fusetools.com/fuse-release-management/releases/0.11.1.6272/osx
 	mv osx fuse/fuse_osx_0_11_1_6262.pkg
@@ -17,7 +14,4 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	sudo chown -R travis $HOME/.fuse
 	echo "Installed Fuse"
 	fuse install android < ./.travis/sdkinstall.txt
-	ls -l /Applications
-	ls -l /Applications/Fuse.app
-	ls -l fuse
 fi

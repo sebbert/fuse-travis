@@ -1,4 +1,10 @@
-language: fuse
+env:
+  global:
+    - NDK_VERSION=r10e
+language: 
+  - fuse
+  - objective-c
+  - android
 os:
   - osx
 sudo: required
@@ -9,9 +15,13 @@ cache:
     - /usr/local/share/uno
     - $HOME/fuse
 
+
+before_install:
+  - ./.travis/install-ndk.sh
+  - ./.travis/install-fuse.sh
+
 # http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
 # before_script:
 #     - ./.travis/add-key.sh
-install:
-    - ./.travis/install.sh
+
 script: ./.travis/test.sh
