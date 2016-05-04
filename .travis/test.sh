@@ -13,9 +13,15 @@ else
 	echo "uno $name - PASS"
 fi
 echo travis_fold:start:ios
-#uno build -tiOS TravisTest.unoproj -v
-#exitcode=$?
+uno build -tiOS TravisTest.unoproj -v
+exitcode=$?
 echo travis_fold:end:ios
+if [ $exitcode -ne 0 ]; then
+	echo "uno ios $name - FAIL"
+	status=$exitcode
+else
+	echo "uno ios $name - PASS"
+fi
 echo travis_fold:start:android
 uno build -tAndroid TravisTest.unoproj -v
 exitcode=$?
