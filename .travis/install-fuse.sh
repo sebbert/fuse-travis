@@ -7,6 +7,7 @@
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	# In /Users/travis/build/bolav/fuse-travis
+	ls -l /Applications/Fuse.app/Contents/Uno/uno.exe
 	mkdir fuse
 	wget https://api.fusetools.com/fuse-release-management/releases/0.12.3.6348/osx
 	mv osx fuse/fuse_osx_0_12_3_6348.pkg
