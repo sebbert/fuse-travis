@@ -11,4 +11,5 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "Installed NDK to $ANDROID_NDK_HOME"
 	mkdir -p "/Users/travis/Library/Android/sdk/ndk-bundle"
 	cp -a $ANDROID_NDK "/Users/travis/Library/Android/sdk/ndk-bundle"
+	ls -l /Users/travis/Library/Android/sdk/ndk-bundle
 fi
