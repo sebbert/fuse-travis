@@ -9,9 +9,9 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	# In /Users/travis/build/bolav/fuse-travis
 	mkdir fuse
 	wget https://api.fusetools.com/fuse-release-management/releases/0.12.3.6348/osx
-	mv osx fuse/fuse_osx_0_11_1_6262.pkg
-	sudo installer -pkg fuse/fuse_osx_0_11_1_6262.pkg -target /
+	mv osx fuse/fuse_osx_0_12_3_6348.pkg
+	sudo installer -pkg fuse/fuse_osx_0_12_3_6348.pkg -target /
 	sudo chown -R travis $HOME/.fuse
 	echo "Installed Fuse"
-	fuse install android < ./.travis/sdkinstall.txt
+	# fuse install android < ./.travis/sdkinstall.txt
 fi
