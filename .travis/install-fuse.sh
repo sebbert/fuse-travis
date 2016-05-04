@@ -18,5 +18,5 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	sudo installer -pkg fuse/fuse_osx_0_12_3_6348.pkg -target /
 	sudo chown -R travis $HOME/.fuse
 	echo "Installed Fuse"
-	# fuse install android < ./.travis/sdkinstall.txt
+	fuse install android < ./.travis/sdkinstall.txt
 fi
