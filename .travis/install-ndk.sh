@@ -9,4 +9,6 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	export ANDROID_NDK_HOME=${PWD}/android-ndk-${NDK_VERSION}
 	export PATH=${PATH}:${ANDROID_NDK_HOME}
 	echo "Installed NDK to $ANDROID_NDK_HOME"
+	mkdir -p "/Users/travis/Library/Android/sdk/ndk-bundle"
+	cp -a $ANDROID_NDK "/Users/travis/Library/Android/sdk/ndk-bundle"
 fi
