@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
+
 KEY_CHAIN=ios-build.keychain
 security create-keychain -p travis $KEY_CHAIN
 # Make the keychain the default so identities are found
