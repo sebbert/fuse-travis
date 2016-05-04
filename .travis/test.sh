@@ -3,7 +3,7 @@
 name=TravisTest
 status=0
 echo travis_fold:start:uno
-uno build TravisTest.unoproj -v
+uno build $name.unoproj -v
 exitcode=$?
 echo travis_fold:end:uno
 if [ $exitcode -ne 0 ]; then
@@ -13,10 +13,10 @@ else
 	echo "uno $name - PASS"
 fi
 echo travis_fold:start:ios
-uno build -tiOS TravisTest.unoproj -v -N
+uno build -tiOS $name.unoproj -v -N
 exitcode=$?
 cd build/iOS/Debug
-xcodebuild -project *.xcodeproj CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+xcodebuild -project $name.xcodeproj CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 exitcode2=$?
 cd ../../..
 echo travis_fold:end:ios
@@ -33,7 +33,7 @@ else
 	echo "uno ios xcodebuild $name - PASS"
 fi
 echo travis_fold:start:android
-uno build -tAndroid TravisTest.unoproj -v
+uno build -tAndroid $name.unoproj -v
 exitcode=$?
 echo travis_fold:end:android
 if [ $exitcode -ne 0 ]; then
