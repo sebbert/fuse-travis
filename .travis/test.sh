@@ -17,8 +17,8 @@ echo [0Ktravis_fold:start:#ios
 #exitcode=$?
 echo [0Ktravis_fold:end:#ios
 echo [0Ktravis_fold:start:#android
-#uno build -tAndroid TravisTest.unoproj -v
-#exitcode=$?
+uno build -tAndroid TravisTest.unoproj -v
+exitcode=$?
 echo [0Ktravis_fold:end:#android
 if [ $exitcode -ne 0 ]; then
 	echo "uno android $name - FAIL"
