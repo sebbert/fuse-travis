@@ -10,6 +10,8 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "Installing Fuse version ${FUSE_VERSION}"
 	ls -l /Applications/Fuse.app/Contents/Uno/uno.exe
 	if [ -x /Applications/Fuse.app/Contents/Uno/uno.exe ]; then
+		echo "Existing installation"
+		cat  ~/.fuse/fuse_version
 		sudo cp ./.travis/files/uno /usr/local/bin/uno
 		exit 0
 	fi
@@ -17,8 +19,8 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	mv osx fuse_osx_${FUSE_VERSION}.pkg
 	sudo installer -pkg fuse_osx_${FUSE_VERSION}.pkg -target /
 	echo "Installed Fuse"
+	ls -l "/Users/travis/Library/Application Support/Fusetools"
+	ls -l "/Users/travis/Library/Application Support/Fusetools/Fuse"
 	fuse install android < ./.travis/sdkinstall.txt
-	ls -l $HOME
-	ls -l ~/.fuse
-	cat ~/.fuse/sdkConfig.json
+	echo ${FUSE_VERSION} > ~/.fuse/fuse_version
 fi
