@@ -31,6 +31,8 @@ before_install:
 
 script: 
   - ./.travis/test_uno.sh
+  - ./.travis/test_ios.sh
+  - ./.travis/test_android.sh
 
 before_cache:
   - mkdir $HOME/fuse

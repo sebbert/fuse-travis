@@ -21,6 +21,6 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	mv osx fuse_osx_${FUSE_VERSION}.pkg
 	sudo installer -pkg fuse_osx_${FUSE_VERSION}.pkg -target /
 	echo "Installed Fuse ${FUSE_VERSION}"
-	mkdir $HOME/.fuse
+	mkdir -p $HOME/.fuse
 	echo ${FUSE_VERSION} > $HOME/.fuse/fuse_version
 fi
