@@ -8,8 +8,11 @@
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	# In /Users/travis/build/bolav/fuse-travis
 	echo "Installing Fuse version ${FUSE_VERSION}"
+	echo "uno"
 	ls -l /Applications/Fuse.app/Contents/Uno/uno.exe
+	echo "fuse"
 	ls -l $HOME/fuse
+	echo "fuse"
 	ls -l ~/fuse
 	if [ -x /Applications/Fuse.app/Contents/Uno/uno.exe ]; then
 		echo "Existing installation"
