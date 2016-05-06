@@ -11,9 +11,9 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "uno"
 	ls -l /Applications/Fuse.app/Contents/Uno/uno.exe
 	echo "fuse"
-	ls -l $HOME/fuse
+	ls -la $HOME/fuse
 	echo "fuse"
-	ls -l ~/fuse
+	ls -la ~/fuse
 	if [ -x /Applications/Fuse.app/Contents/Uno/uno.exe ]; then
 		echo "Existing installation"
 		cat  ~/.fuse/fuse_version
