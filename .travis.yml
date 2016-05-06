@@ -15,8 +15,9 @@ cache:
   directories:
     - /Applications/Fuse.app
     - /usr/local/share/uno
-    - $HOME/fuse
+    - $HOME/.fuse
     - $HOME/Library/Android/sdk/ndk-bundle
+    - "/Users/travis/Library/Application Support/Fusetools/"
 
 
 before_install:
