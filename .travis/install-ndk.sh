@@ -11,6 +11,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	unzip android-ndk-${NDK_VERSION}-darwin-x86_64.zip | grep -v inflating: | grep -v creating: | grep -v extracting:
 	rm android-ndk-${NDK_VERSION}-darwin-x86_64.zip
 	mkdir -p "/Users/travis/Library/Android/sdk/"
+	ls -l /Users/travis/Library/Android/sdk
 	ls -l /Users/travis/Library/Android/sdk/ndk-bundle
 	mv android-ndk-${NDK_VERSION} "/Users/travis/Library/Android/sdk/ndk-bundle"
 	echo "Installed NDK to /Users/travis/Library/Android/sdk/ndk-bundle"
