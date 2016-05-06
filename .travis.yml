@@ -1,9 +1,7 @@
 env:
   matrix:
-    - T1=arne
+    - T1=android
     - T1=bjarne
-    - T2=gunnar
-    - T2=tove
   global:
     - NDK_VERSION=r10e
     - FUSE_VERSION=0.12.3.6348
@@ -14,6 +12,10 @@ language:
   - android
 os:
   - osx
+osx_image:
+  - xcode7.3
+  - xcode7
+  - xcode6.4
 sudo: required
 
 cache:
