@@ -1,4 +1,9 @@
 env:
+  matrix:
+    - T1=arne
+    - T1=bjarne
+    - T2=gunnar
+    - T2=tove
   global:
     - NDK_VERSION=r10e
     - FUSE_VERSION=0.12.3.6348
@@ -21,9 +26,9 @@ cache:
 
 
 before_install:
-  - ./.travis/install-ndk.sh
-  - ./.travis/install-fuse.sh
-  - ./.travis/install-fuseandroid.sh
+  # - ./.travis/install-ndk.sh
+  # - ./.travis/install-fuse.sh
+  # - ./.travis/install-fuseandroid.sh
 
 # http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
 # before_script:
@@ -31,8 +36,8 @@ before_install:
 
 script: 
   - ./.travis/test_uno.sh
-  - ./.travis/test_ios.sh
-  - ./.travis/test_android.sh
+  # - ./.travis/test_ios.sh
+  # - ./.travis/test_android.sh
 
 before_cache:
   - mkdir $HOME/fuse
