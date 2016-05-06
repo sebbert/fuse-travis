@@ -16,7 +16,7 @@ cache:
 #    - /Applications/Fuse.app
 #    - /usr/local/share/uno
 #    - $HOME/.fuse
-    - $HOME/Library/Android/sdk/ndk-bundle
+    - $HOME/Library/Android
 #    - $HOME/fuse
 
 
