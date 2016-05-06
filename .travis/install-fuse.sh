@@ -8,12 +8,9 @@
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	# In /Users/travis/build/bolav/fuse-travis
 	echo "Installing Fuse version ${FUSE_VERSION}"
-	echo "uno"
 	ls -l /Applications/Fuse.app/Contents/Uno/uno.exe
-	echo "fuse"
-	ls -la $HOME/fuse
-	echo "fuse"
-	ls -la ~/fuse
+	echo "fuse/sdk"
+	cat ~/.fuse/sdkConfig.json
 	if [ -x /Applications/Fuse.app/Contents/Uno/uno.exe ]; then
 		echo "Existing installation"
 		cat  ~/.fuse/fuse_version
@@ -24,6 +21,5 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	mv osx fuse_osx_${FUSE_VERSION}.pkg
 	sudo installer -pkg fuse_osx_${FUSE_VERSION}.pkg -target /
 	echo "Installed Fuse ${FUSE_VERSION}"
-	fuse install android < ./.travis/sdkinstall.txt
 	echo ${FUSE_VERSION} > ~/.fuse/fuse_version
 fi

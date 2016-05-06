@@ -23,12 +23,14 @@ cache:
 before_install:
   - ./.travis/install-ndk.sh
   - ./.travis/install-fuse.sh
+  - ./.travis/install-fuseandroid.sh
 
 # http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
 # before_script:
 #     - ./.travis/add-key.sh
 
-script: ./.travis/test.sh
+script: 
+  - ./.travis/test_uno.sh
 
 before_cache:
   - mkdir $HOME/fuse
