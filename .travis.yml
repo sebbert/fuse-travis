@@ -3,6 +3,7 @@ env:
     - NDK_VERSION=r10e
     - FUSE_VERSION=0.12.3.6348
     - UNOPROJ=TravisTest
+    - APPSUPPORT="/Users/travis/Library/Application Support/Fusetools/"
 language: 
   - fuse
   - objective-c
@@ -17,8 +18,7 @@ cache:
     - /usr/local/share/uno
     - $HOME/.fuse
     - $HOME/Library/Android/sdk/ndk-bundle
-    - "/Users/travis/Library/Application\\\\ Support/Fusetools/"
-
+    - $APPSUPPORT
 
 before_install:
   - ./.travis/install-ndk.sh
