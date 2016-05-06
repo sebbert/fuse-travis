@@ -2,7 +2,6 @@
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "Installing Android NDK version ${NDK_VERSION}"
-	find /usr/local/android-sdk
 	wget http://dl.google.com/android/repository/android-ndk-${NDK_VERSION}-darwin-x86_64.zip
 	unzip android-ndk-${NDK_VERSION}-darwin-x86_64.zip | grep -v inflating: | grep -v creating: | grep -v extracting:
 	rm android-ndk-${NDK_VERSION}-darwin-x86_64.zip

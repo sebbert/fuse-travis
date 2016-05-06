@@ -3,7 +3,10 @@ env:
     - NDK_VERSION=r10e
     - FUSE_VERSION=0.12.3.6348
     - UNOPROJ=TravisTest
-language: objective-c
+language: 
+  - fuse
+  - objective-c
+  - android
 os:
   - osx
 sudo: required
