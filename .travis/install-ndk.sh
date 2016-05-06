@@ -2,6 +2,7 @@
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
 	echo "Installing Android NDK version ${NDK_VERSION}"
+	find /usr/local/android-sdk
 	which ndk-build
 	find / | grep -i sdk
 	exit 0
