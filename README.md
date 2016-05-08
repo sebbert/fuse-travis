@@ -1,6 +1,5 @@
 # fuse-travis
 
-
 Checking if /Users/travis/Library/Application Support/Fusetools/Fuse/Android/AndroidSDK exists.
 /Users/travis/Library/Application Support/Fusetools/Fuse/Android/AndroidSDK was not found.
 Checking if /Users/travis/Library/Android/sdk exists.
