@@ -1,12 +1,14 @@
 env:
   global:
     - NDK_VERSION=r10e
-    - FUSE_VERSION=0.12.3.6348
-    - UNOPROJ=TravisTest
+    - FUSE_VERSION=0.20.3.6549
+    - UNOPROJ=wvisible_example
+    - NAME=WhileVisibleInScrollViewExample
 language: 
   - fuse
   - objective-c
   - android
+  - node_js
 os:
   - osx
 sudo: required
@@ -25,15 +27,7 @@ before_install:
   - ./.travis/install-fuse.sh
   - ./.travis/install-fuseandroid.sh
 
-# http://stackoverflow.com/questions/27671854/travis-ci-fails-to-build-with-a-code-signing-error
-# before_script:
-#     - ./.travis/add-key.sh
-
-script: 
+script:
   - ./.travis/test_uno.sh
   - ./.travis/test_ios.sh
   - ./.travis/test_android.sh
-
-before_cache:
-  - mkdir $HOME/fuse
-  - mv "/Users/travis/Library/Application Support/Fusetools" $HOME/fuse/appsupport
