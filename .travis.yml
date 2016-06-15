@@ -2,13 +2,11 @@ env:
   global:
     - NDK_VERSION=r10e
     - FUSE_VERSION=0.20.3.6549
-    - UNOPROJ=wvisible_example
-    - NAME=WhileVisibleInScrollViewExample
+    - UNOPROJ=TravisTest
 language: 
   - fuse
   - objective-c
   - android
-  - node_js
 os:
   - osx
 sudo: required
